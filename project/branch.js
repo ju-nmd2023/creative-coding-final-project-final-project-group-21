@@ -12,15 +12,26 @@ function makeBranch(x, y, dir, col, isAxon, life, turn) {
         dir, //heading, radians
         col, //p5.Color
         isAxon, //cosmetic thickness
-        life,
-        total: life, //remaining and initial life
+        life, total: life, //remaining and initial life
         turn, // curvature factor
         n: random(1000), //noise cursor
 
-        speed: random(Config.SPEED[1]), 
+        speed: random(Config.SPEED[0], Config.SPEED[1]), 
 
         dead: false
     };
+}
+
+//Smallest angle difference (radians)
+function angleDiff(a, b) {
+ let d = (b - a + PI) % (TWO_PI) - PI;
+ if (d < -PI) d += TWO_PI;
+ return d;
+}
+
+
+//off-canvas check with small margin
+function outside (x, y) { return x < -12 || x > width + 12 || y < -12 || y > height + 12;
 }
 
 //Advance one branch by one step; curve, move, draw, (finsih)
@@ -38,8 +49,10 @@ function stepBranch(b) {
     //Slight steering towards mouse if within radius
     let dm = dist(b.x, b.y, mouseX, mouseY);
     if (dm < Config.MOUSE_RADIUS) {
-        let target = atan2(mouseY - b.y, mouseX - b.x);
+        let ta = atan2(mouseY - b.y, mouseX - b.x);
+        b.dir += angleDiff(b.dir, ta) * Config.MOUSE_STEER;
     }
+
 
     //Advance position
     b.x += cos(b.dir) * b.speed;
@@ -65,21 +78,12 @@ function stepBranch(b) {
         circle(b.x, b.y, lerp(Config.DOT_MAX, Config.DOT_MIN, 1 - t));
 
         tips.push({ x: b.x, y: b.y, col: b.col});
-        if (tips.length > Config.MAX_TIPS) {
-            tips.slice(0, tips.length - Config.MAX_TIPS);
-        }
+        if (tips.length > Config.MAX_TIPS) tips.splice(0, tips.length - Config.MAX_TIPS);
+    
         b.dead = true;
     }
 }
 
-//Smallest angle difference (radians)
-function angleDiff(a, b) {
-    let d = (b - a + PI) % (TWO_PI) - PI;
-    if (d < -PI) d += TWO-PI;
-    return d;
-}
-
-//off-canvas check with small margin
-function outside (x, y) {
-    return x < -12 || x > width + 12 || y < -12 || y > height + 12;
-}
+//expose
+window.makeBranch = makeBranch;
+window.stepBranch = stepBranch;
