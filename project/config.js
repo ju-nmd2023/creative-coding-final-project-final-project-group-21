@@ -1,38 +1,35 @@
-/**
- * Global configuration: tweak visuals and performance here.
- */
-const Config = {
-  // Palette cycles per click
+// Global configuration (tweak mood/perf here)
+window.Config = {
   COLORS: ['#86e3ff', '#82f0c8', '#ffc06e', '#ff97c7', '#8aa9ff', '#ffa27a'],
 
-  // Burst composition (click spawns)
-  BURST_SEEDS: [26, 38],      // starters per click (min, max)
-  AXON_CHANCE: 0.28,          // probability a starter is an axon
-  AXON_LIFE: [220, 360],      // axons live longer, straighter
-  DEND_LIFE: [60, 120],       // dendrites live shorter, curlier
-  AXON_TURN: 0.08,            // curvature (smaller = straighter)
+  // Burst composition
+  BURST_SEEDS: [26, 38],
+  AXON_CHANCE: 0.28,
+  AXON_LIFE: [220, 360],
+  DEND_LIFE: [60, 120],
+  AXON_TURN: 0.08,
   DEND_TURN: 0.22,
-  SPEED: [0.9, 1.4],          // branch speed range
+  SPEED: [0.9, 1.4],
 
   // Rendering
-  THICK_MIN: 0.6, THICK_MAX: 1.6, // line thickness
-  DOT_MIN: 2.0, DOT_MAX: 4.0,     // synapse dot size
+  THICK_MIN: 0.6, THICK_MAX: 1.6,
+  DOT_MIN: 2.0,  DOT_MAX: 4.0,
 
   // Interaction
-  MOUSE_RADIUS: 160,          // steer radius
-  MOUSE_STEER: 0.06,          // steer strength (keep small)
+  MOUSE_RADIUS: 160,
+  MOUSE_STEER: 0.06,
 
-  // Linking between endpoints
-  LINK_RADIUS: 48,            // max distance to draw link
-  LINK_ALPHA: 90,             // link opacity
+  // Linking
+  LINK_RADIUS: 48,
+  LINK_ALPHA: 90,
 
-  // Live/perf
-  FRAME_RATE: 45,             // keeps laptops happy
-  FADE_ALPHA: 10,             // translucent veil each frame
-  RESPAWN_EVERY: 24,          // try extra sprouts every N frames
-  EXTRA_SPROUTS: 2,           // new sprouts per respawn tick
+  // Life / perf
+  FRAME_RATE: 45,
+  FADE_ALPHA: 10,
+  RESPAWN_EVERY: 24,
+  EXTRA_SPROUTS: 2,
 
   // Safety caps
-  MAX_ACTIVE: 700,            // max active branches
-  MAX_TIPS: 4000              // max stored endpoints
+  MAX_ACTIVE: 700,
+  MAX_TIPS: 4000
 };
