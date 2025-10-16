@@ -36,3 +36,5 @@ function connectNearbyTips() {
         }
     }
 }
+
+window.connectNearbyTips = connectNearbyTips;

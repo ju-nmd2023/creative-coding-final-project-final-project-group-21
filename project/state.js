@@ -1,24 +1,24 @@
 //Shared state arrays and helpers//
 
 //active, growing segments
-let branches = []; 
+window.branches = []; 
 
 //finished endpoints links
-let tips = [];
+window.tips = [];
 
 //rings click
-let rippples = [];
+window.ripples = [];
 
 //palette per click start
-let colorIndex = 0; 
+window.colorIndex = 0; 
 
 //grill cell size for neighbour search
-let CELL = Config.LINK_RADIUS;
+window.CELL = Config.LINK_RADIUS;
 
 //scene reset to clean state
-function resetScene() {
+window.resetScene = function resetScene() {
     branches.length = 0; 
     tips.length = 0; 
     ripples.length = 0; 
-    backround(0); 
+    background(0); 
 }

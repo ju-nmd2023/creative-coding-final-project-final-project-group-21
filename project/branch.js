@@ -66,7 +66,6 @@ function stepBranch(b) {
     stroke(red(b.col), green(b.col), blue(b.col), 205);
     strokeWeight(w);
     line(b.px, b.py, b.x, b.y); 
-    noStroke();
 
     //lifetime
     b.life--;
