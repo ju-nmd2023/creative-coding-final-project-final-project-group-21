@@ -31,6 +31,14 @@ function setup() {
 
   randomSeed(17);
   noiseSeed(17);
+
+  //music
+  player = new Tone.Player("assets/music.wav").toDestination();
+  player.loop = true;
+  player.autostart = false;
+
+  player.volume.value = -0.8;
+  player.playbackRate = 1.0;
 }
 
 function draw() {
@@ -62,6 +70,22 @@ function windowResized() {
 
 function keyPressed() {
   if (key === 'r' || key === 'R') resetScene();
+
+  if (key === ' ') {
+    togglePlay();
+    return false;
+  }
+
+  //controls 
+  //volume 
+  if (key === 'ArrowUp')   { player.volume.value = Math.min(0,   player.volume.value + 1); return false; }
+  if (key === 'ArrowDown') { player.volume.value = Math.max(-60, player.volume.value - 1); return false; }
+
+  //playback rate
+  if (key === 'ArrowRight') { player.playbackRate = player.playbackRate + 0.1; return false; }
+  if (key === 'ArrowLeft')  { player.playbackRate = Math.max(0.1, player.playbackRate - 0.1); return false; }
+
+  if (key === '0') { player.playbackRate = 1.0; return false; }
 }
 
 function mousePressed() {
@@ -69,3 +93,24 @@ function mousePressed() {
   spawnBurst(mouseX, mouseY, col);
   ripples.push({ x: mouseX, y: mouseY, col, life: 26, r: 120 });
 }
+
+//audio globals
+let player = null;
+let isPlaying = false; 
+let repeatOnceTimer = null;
+
+
+async function togglePlay() {
+  if (!player) return;
+  await Tone.start(); // required once by browser policy
+
+  // Use the real Tone state instead of our own flag
+  const running = (player.state === 'started');
+
+  if (running) {
+    player.stop(0);     // stop immediately
+  } else {
+    player.start(0);    // start from the beginning
+  }
+}
+
