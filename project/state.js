@@ -12,7 +12,7 @@ window.ripples = [];
 //palette per click start
 window.colorIndex = 0; 
 
-//grill cell size for neighbour search
+//grid cell size for neighbour search
 window.CELL = Config.LINK_RADIUS;
 
 //scene reset to clean state
