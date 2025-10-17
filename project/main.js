@@ -1,3 +1,27 @@
+/*
+Name: Coding Challenge #15: Object Oriented Fractal Trees
+Video: https://www.youtube.com/watch?v=fcdNSZ9IzJM
+*/
+
+
+/*
+Name: Spatial Hash Grids & Tales from Game Development
+Video Tutorial: https://www.youtube.com/watch?v=sx4IIQL0x7c
+*/
+
+
+/*
+Name: Object Oriented Ripples in p5.js (DGST 302: Week 3, Day 3)
+Video Tutorial: https://www.youtube.com/watch?v=9lEaYKP7yV0
+*/
+
+
+/*
+Name: 4.1: Particle System Simulation - The Nature of Code
+Video Tutorial: https://www.youtube.com/watch?v=syR0klfncCk
+*/
+
+
 //data.json connection
 const nameEl = document.getElementById('artwork-name');
 const descEl = document.getElementById('description-comment');

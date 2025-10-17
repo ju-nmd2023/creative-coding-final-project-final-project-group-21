@@ -1,16 +1,5 @@
 // for creating branches and growth steps
 
-/*
-Code inspired by The Coding Train
-Name: Coding Challenge #15: Object Oriented Fractal Trees
-Video: https://www.youtube.com/watch?v=fcdNSZ9IzJM
-*/
-
-/*
-Code inspired by The Coding Train
-Name: Coding Challenge #17: Fractal Trees - Space Colonization
-Video: https://www.youtube.com/watch?v=kKT0v3qhIQY
-*/
 
 //Create new branch object
 function makeBranch(x, y, dir, col, isAxon, life, turn) {

@@ -1,8 +1,3 @@
-/*
-Code inspired by The Coding Train
-Name: 4.1: Particle System Simulation - The Nature of Code
-Video Tutorial: https://www.youtube.com/watch?v=syR0klfncCk
-*/
 
 // Spawning bursts and passive sprouts
 

@@ -1,8 +1,3 @@
-/*
-Code inspired by SimonDev
-Name: Spatial Hash Grids & Tales from Game Development
-Video Tutorial: https://www.youtube.com/watch?v=sx4IIQL0x7c
-*/
 
 //fast neighbour connections with spatial grid
 function connectNearbyTips() {
