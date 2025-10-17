@@ -1,7 +1,15 @@
 // for creating branches and growth steps
 
-/*https://www.youtube.com/watch?v=fcdNSZ9IzJM
-https://www.youtube.com/watch?v=kKT0v3qhIQY
+/*
+Code inspired by The Coding Train
+Name: Coding Challenge #15: Object Oriented Fractal Trees
+Video: https://www.youtube.com/watch?v=fcdNSZ9IzJM
+*/
+
+/*
+Code inspired by The Coding Train
+Name: Coding Challenge #17: Fractal Trees - Space Colonization
+Video: https://www.youtube.com/watch?v=kKT0v3qhIQY
 */
 
 //Create new branch object
