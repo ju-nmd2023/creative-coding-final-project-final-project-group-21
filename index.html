@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artwork</title>
-    <link rel="stylesheet" href="assets/styles.css"/>
+    <link rel="stylesheet" href="assets/styles.css" />
     <script src="assets/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
-<script src="project/config.js"></script>
-<script src="project/state.js"></script>
-<script src="project/branch.js"></script>
-<script src="project/spawn.js"></script>
-<script src="project/links.js"></script>
-<script src="project/ripple.js"></script>
-<script src="project/audio.js" defer></script>
-<script src="project/main.js"></script>
-</head>
-<body>
+    <script src="project/config.js"></script>
+    <script src="project/state.js"></script>
+    <script src="project/branch.js"></script>
+    <script src="project/spawn.js"></script>
+    <script src="project/links.js"></script>
+    <script src="project/ripple.js"></script>
+    <script src="project/audio.js" defer></script>
+    <script src="project/main.js"></script>
+  </head>
+  <body>
     <div id="p5container"></div>
 
-
     <header>
-        <div>
-            <h1 id="name">Group 21</h1>
-            <p id="members">Anastasiia Makarova, Denisa-Georgiana Badea</p>
-        </div>
+      <div>
+        <h1 id="name">Group 21</h1>
+        <p id="members">Anastasiia Makarova, Denisa-Georgiana Badea</p>
+      </div>
     </header>
 
-
     <main>
-        <section id="left-info">
-            <h2 id="artwork-name"></h2>
-            <h3>Description</h3>
-            <p id="description-comment"></p>
-        </section>
+      <section id="left-info">
+        <h2 id="artwork-name"></h2>
+        <h3>Description</h3>
+        <p id="description-comment"></p>
+      </section>
 
-        <section id="controls">
-            <h4>Controls</h4>
-            <p>Space: play/pause</p>
-            <p>R: reset scene</p>
-            <p>↑ / ↓ : volume up/down</p>
-            <p>← / →  : playback rate</p>
-            <p>0: reset rate</p>
-        </section>
+      <section id="controls">
+        <h4>Controls</h4>
+        <div class="controls-list">
+          <p>Click - neuron growth</p>
+          <p>Move mouse - slight branch influence</p>
+          <p>R key - scene reset</p>
+          <p>↑ / ↓ : volume up/down</p>
+          <p>Space - play/pause</p>
+          <p>← / → : playback rate</p>
+          <p>0: reset rate</p>
+        </div>
+      </section>
     </main>
 
-
-    <footer>
-
-
-    </footer>
-
-
-</body>
+    <footer></footer>
+  </body>
 </html>

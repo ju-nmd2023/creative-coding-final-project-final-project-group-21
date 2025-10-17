@@ -2,7 +2,7 @@
     {
         "file": "assets/artwork.js",
         "name": "Neuron Threads",
-        "description": " explain description lorem ipsum"
+        "description": "An interactive generative artwork inspired by neural growth. Each click releases a burst of organic lines that grow, branch, and connect into a living network — softly guided by the viewer's movements. A piano loop creates a calming atmosphere, in which the viewer can control the sound easily through the keyboard."
 
     }
 ]

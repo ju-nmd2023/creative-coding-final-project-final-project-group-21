@@ -26,7 +26,7 @@ h4 {
 
 
 p {
-  font-size: medium;
+  font-size: 17px;
   margin: 0;
 }
 
@@ -90,10 +90,26 @@ main {
 
 
 #controls {
-  text-align: right;
+  text-align: left;
   max-width: 40%;
   padding-right: 80px;
   font-size: x-large;
+  margin: 5;
+}
+
+#controls .controls-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 6px;
+  text-align: left;
+  margin-top: 4px;
+}
+
+#controls .controls-list p {
+  margin: 2px 0;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 
